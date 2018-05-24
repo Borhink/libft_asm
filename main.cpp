@@ -66,11 +66,23 @@ void test_isalnum(void)
 	std::cout << std::endl;
 }
 
+void test_isascii(void)
+{
+	std::cout << "test ft_isascii: " << std::endl;
+	std::cout << "ft_isascii(-1): " << ft_isascii(-1) << std::endl;
+	std::cout << "ft_isascii(0): " << ft_isascii(0) << std::endl;
+	std::cout << "ft_isascii(100): " << ft_isascii(100) << std::endl;
+	std::cout << "ft_isascii(127): " << ft_isascii(127) << std::endl;
+	std::cout << "ft_isascii(128): " << ft_isascii(128) << std::endl;
+	std::cout << std::endl;
+}
+
 int main(void)
 {
 	test_bzero();
 	test_isalpha();
 	test_isdigit();
 	test_isalnum();
+	test_isascii();
 	return (0);
 }
