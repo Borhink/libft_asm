@@ -1,6 +1,8 @@
 section .text
 global _ft_bzero
 
+; void ft_bzero(void *mem, size_t len);
+;
 ; rdi -> void *mem
 ; rsi -> size_t len
 

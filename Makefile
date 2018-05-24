@@ -14,7 +14,11 @@ SRC_PATH = ./src/
 OBJ_PATH = ./obj/
 INC_PATH = ./inc/
 
-SRC_NAME = ft_bzero.s
+SRC_NAME =	ft_bzero.s \
+			ft_isalpha.s \
+			ft_isdigit.s \
+			ft_isalnum.s
+
 TEST_SRC_NAME = main.cpp
 OBJ_NAME = $(SRC_NAME:.s=.o)
 NAME = libfts.a
@@ -46,6 +50,9 @@ $(OBJ_PATH)%.o: $(SRC_PATH)%.s
 
 $(TEST_NAME): $(OBJ) $(TEST_SRC_NAME)
 	$(CC) $(CFLAGS) $(INC) $(LIB) $(TEST_SRC_NAME) -o $@
+
+run: all $(TEST_NAME)
+	./$(TEST_NAME)
 
 clean:
 	@echo "\033[31;44m Make clean $(NAME) \033[0m"
