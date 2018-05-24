@@ -21,7 +21,10 @@ SRC_NAME =	ft_bzero.s \
 			ft_isascii.s \
 			ft_isprint.s \
 			ft_toupper.s \
-			ft_tolower.s
+			ft_tolower.s \
+			ft_puts.s \
+			\
+			ft_strlen.s
 
 TEST_SRC_NAME = main.cpp
 OBJ_NAME = $(SRC_NAME:.s=.o)

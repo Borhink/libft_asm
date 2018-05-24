@@ -112,6 +112,35 @@ void test_tolower(void)
 	std::cout << std::endl;
 }
 
+void test_strlen(void)
+{
+	std::cout << "test ft_strlen: " << std::endl;
+	std::cout << "ft_strlen(\"\"): " << ft_strlen("") << std::endl;
+	std::cout << "ft_strlen(\"0123456789\"): " << ft_strlen("0123456789") << std::endl;
+	std::cout << "ft_strlen(\"abcdefghijklmnopqrstuvwxyz\"): " << ft_strlen("abcdefghijklmnopqrstuvwxyz") << std::endl;
+	std::cout << std::endl;
+}
+
+void test_puts(void)
+{
+	int ret;
+
+	std::cout << "test ft_puts: " << std::endl;
+	std::cout << "ft_puts(\"\"): " << std::endl;
+	ret = ft_puts("");
+	std::cout << "ret: " << ret << std::endl;
+	std::cout << "ft_puts(0): " << std::endl;
+	ret = ft_puts(0);
+	std::cout << "ret: " << ret << std::endl;
+	std::cout << "ft_puts(\"0123456789\"): " << std::endl;
+	ret = ft_puts("0123456789");
+	std::cout << "ret: " << ret << std::endl;
+	std::cout << "ft_puts(\"abcdefghijklmnopqrstuvwxyz\"): " << std::endl;
+	ret = ft_puts("abcdefghijklmnopqrstuvwxyz");
+	std::cout << "ret: " << ret << std::endl;
+	std::cout << std::endl;
+}
+
 int main(void)
 {
 	test_bzero();
@@ -123,6 +152,8 @@ int main(void)
 	test_isprint();
 	test_toupper();
 	test_tolower();
-	//test_puts();
+	test_puts();
+
+	test_strlen();
 	return (0);
 }
