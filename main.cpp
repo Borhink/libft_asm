@@ -77,6 +77,17 @@ void test_isascii(void)
 	std::cout << std::endl;
 }
 
+void test_isprint(void)
+{
+	std::cout << "test ft_isprint: " << std::endl;
+	std::cout << "ft_isprint(31): " << ft_isprint(31) << std::endl;
+	std::cout << "ft_isprint(32): " << ft_isprint(32) << std::endl;
+	std::cout << "ft_isprint(100): " << ft_isprint(100) << std::endl;
+	std::cout << "ft_isprint(126): " << ft_isprint(126) << std::endl;
+	std::cout << "ft_isprint(127): " << ft_isprint(127) << std::endl;
+	std::cout << std::endl;
+}
+
 int main(void)
 {
 	test_bzero();
@@ -84,5 +95,6 @@ int main(void)
 	test_isdigit();
 	test_isalnum();
 	test_isascii();
+	test_isprint();
 	return (0);
 }
