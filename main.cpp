@@ -88,13 +88,41 @@ void test_isprint(void)
 	std::cout << std::endl;
 }
 
+void test_toupper(void)
+{
+	std::cout << "test ft_toupper: " << std::endl;
+	std::cout << "ft_toupper('a'): " << static_cast<char>(ft_toupper('a')) << std::endl;
+	std::cout << "ft_toupper('g'): " << static_cast<char>(ft_toupper('g')) << std::endl;
+	std::cout << "ft_toupper('z'): " << static_cast<char>(ft_toupper('z')) << std::endl;
+	std::cout << "ft_toupper('A'): " << static_cast<char>(ft_toupper('A')) << std::endl;
+	std::cout << "ft_toupper('Z'): " << static_cast<char>(ft_toupper('Z')) << std::endl;
+	std::cout << "ft_toupper('5'): " << static_cast<char>(ft_toupper('5')) << std::endl;
+	std::cout << std::endl;
+}
+
+void test_tolower(void)
+{
+	std::cout << "test ft_tolower: " << std::endl;
+	std::cout << "ft_tolower('A'): " << static_cast<char>(ft_tolower('A')) << std::endl;
+	std::cout << "ft_tolower('G'): " << static_cast<char>(ft_tolower('G')) << std::endl;
+	std::cout << "ft_tolower('Z'): " << static_cast<char>(ft_tolower('Z')) << std::endl;
+	std::cout << "ft_tolower('a'): " << static_cast<char>(ft_tolower('a')) << std::endl;
+	std::cout << "ft_tolower('z'): " << static_cast<char>(ft_tolower('z')) << std::endl;
+	std::cout << "ft_tolower('5'): " << static_cast<char>(ft_tolower('5')) << std::endl;
+	std::cout << std::endl;
+}
+
 int main(void)
 {
 	test_bzero();
+	//test_strcat();
 	test_isalpha();
 	test_isdigit();
 	test_isalnum();
 	test_isascii();
 	test_isprint();
+	test_toupper();
+	test_tolower();
+	//test_puts();
 	return (0);
 }
