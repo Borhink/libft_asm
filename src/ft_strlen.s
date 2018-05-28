@@ -8,14 +8,12 @@ global _ft_strlen
 ; rax -> return val
 
 _ft_strlen:
-    mov     rax,        0
-
-loop:
-    cmp     byte[rdi],  0   ;   if (*rdi == 0)
-    je      return          ;       return (rax);
-    inc     rax             ;   ++rax;
-    inc     rdi             ;   ++rdi;
-    jmp     loop            ;   jump to label loop (while (*rdi != 0))
+    mov     rax,	0		;
+	mov		rcx,	-1		;
+	cld						;
+    repne	scasb			;
+	mov		rax,	-2		;
+	sub		rax,	rcx		;
 
 return:
     ret                     ;   return (rax);
