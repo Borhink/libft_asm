@@ -219,6 +219,15 @@ void test_cat(void)
 	std::cout << std::endl;
 }
 
+void	test_abs(void)
+{
+	std::cout << "test ft_abs: " << std::endl;
+	std::cout << "ft_abs(0): " << ft_abs(0) << std::endl;
+	std::cout << "ft_abs(100): " << ft_abs(100) << std::endl;
+	std::cout << "ft_abs(-256): " << ft_abs(-256) << std::endl;
+	std::cout << std::endl;
+}
+
 int main(void)
 {
 	test_bzero();
@@ -238,5 +247,7 @@ int main(void)
 	test_strdup();
 
 	test_cat();
+
+	test_abs();
 	return (0);
 }

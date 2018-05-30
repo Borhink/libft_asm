@@ -22,6 +22,8 @@ extern "C"
     char    *ft_strdup(const char *s);
 
     void    ft_cat(int fd);
+
+    long    ft_abs(long nb);
 }
 
 #endif
