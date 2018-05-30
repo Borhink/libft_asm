@@ -16,6 +16,28 @@ void test_bzero(void)
 	delete [] mem;
 }
 
+void test_strcat(void)
+{
+	char *m1 = new char[10];
+	char *m2 = new char[5];
+
+	std::cout << "test ft_strcat: " << std::endl;
+	for (int i = 0; i < 6; i++)
+		m1[i] = 'A';
+	m1[5] = '\0';
+	for (int i = 0; i < 4; i++)
+		m2[i] = 'B';
+	m2[3] = '\0';
+	std::cout << "before: m1 -> " << m1 << ", m2 -> " << m2 << std::endl;
+	std::cout << "addr :" << (long)m1 << std::endl;
+	m1 = ft_strcat(m1, m2);
+	std::cout << "addr :" << (long)m1 << std::endl;
+	std::cout << "after: m1 -> " << m1 << ", m2 -> " << m2 << std::endl;
+	std::cout << std::endl;
+	delete [] m1;
+	delete [] m2;
+}
+
 void test_isalpha(void)
 {
 	std::cout << "test ft_isalpha: " << std::endl;
@@ -112,15 +134,6 @@ void test_tolower(void)
 	std::cout << std::endl;
 }
 
-void test_strlen(void)
-{
-	std::cout << "test ft_strlen: " << std::endl;
-	std::cout << "ft_strlen(\"\"): " << ft_strlen("") << std::endl;
-	std::cout << "ft_strlen(\"0123456789\"): " << ft_strlen("0123456789") << std::endl;
-	std::cout << "ft_strlen(\"abcdefghijklmnopqrstuvwxyz\"): " << ft_strlen("abcdefghijklmnopqrstuvwxyz") << std::endl;
-	std::cout << std::endl;
-}
-
 void test_puts(void)
 {
 	int ret;
@@ -141,19 +154,43 @@ void test_puts(void)
 	std::cout << std::endl;
 }
 
+void test_strlen(void)
+{
+	std::cout << "test ft_strlen: " << std::endl;
+	std::cout << "ft_strlen(\"\"): " << ft_strlen("") << std::endl;
+	std::cout << "ft_strlen(\"0123456789\"): " << ft_strlen("0123456789") << std::endl;
+	std::cout << "ft_strlen(\"abcdefghijklmnopqrstuvwxyz\"): " << ft_strlen("abcdefghijklmnopqrstuvwxyz") << std::endl;
+	std::cout << std::endl;
+}
+
+void test_memset(void)
+{
+	char *mem = new char[10];
+
+	std::cout << "test ft_memset: " << std::endl;
+	for (int i = 0; i < 10; i++)
+		mem[i] = 'A';
+	mem[9] = '\0';
+	std::cout << "mem before: " << mem << std::endl;
+	ft_memset(mem, 'E', 9);
+	std::cout << "mem after : " << mem << std::endl;
+	std::cout << std::endl;
+	delete [] mem;
+}
+
 int main(void)
 {
-	test_bzero();
-	//test_strcat();
-	test_isalpha();
-	test_isdigit();
-	test_isalnum();
-	test_isascii();
-	test_isprint();
-	test_toupper();
-	test_tolower();
-	test_puts();
-
+	// test_bzero();
+	test_strcat();
+	// test_isalpha();
+	// test_isdigit();
+	// test_isalnum();
+	// test_isascii();
+	// test_isprint();
+	// test_toupper();
+	// test_tolower();
+	// test_puts();
 	test_strlen();
+	test_memset();
 	return (0);
 }

@@ -23,3 +23,5 @@ set:
 return:
 	mov		rax,	r8
     ret                     ;   return(mem);
+
+; stosb = STOre String Byte

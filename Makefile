@@ -15,6 +15,7 @@ OBJ_PATH = ./obj/
 INC_PATH = ./inc/
 
 SRC_NAME =	ft_bzero.s \
+			ft_strcat.s \
 			ft_isalpha.s \
 			ft_isdigit.s \
 			ft_isalnum.s \
@@ -24,7 +25,8 @@ SRC_NAME =	ft_bzero.s \
 			ft_tolower.s \
 			ft_puts.s \
 			\
-			ft_strlen.s
+			ft_strlen.s \
+			ft_memset.s
 
 TEST_SRC_NAME = main.cpp
 OBJ_NAME = $(SRC_NAME:.s=.o)
