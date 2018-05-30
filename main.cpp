@@ -29,10 +29,8 @@ void test_strcat(void)
 		m2[i] = 'B';
 	m2[3] = '\0';
 	std::cout << "before: m1 -> " << m1 << ", m2 -> " << m2 << std::endl;
-	std::cout << "addr :" << (long)m1 << std::endl;
 	m1 = ft_strcat(m1, m2);
-	std::cout << "addr :" << (long)m1 << std::endl;
-	std::cout << "after: m1 -> " << m1 << ", m2 -> " << m2 << std::endl;
+	std::cout << "after : m1 -> " << m1 << ", m2 -> " << m2 << std::endl;
 	std::cout << std::endl;
 	delete [] m1;
 	delete [] m2;
@@ -178,19 +176,52 @@ void test_memset(void)
 	delete [] mem;
 }
 
+void test_memcpy(void)
+{
+	char *m1 = new char[10];
+	char *m2 = new char[10];
+
+	std::cout << "test ft_memcpy: " << std::endl;
+	for (int i = 0; i < 10; i++)
+		m1[i] = '1';
+	m1[9] = '\0';
+	for (int i = 0; i < 10; i++)
+		m2[i] = 'B';
+	m2[9] = '\0';
+	std::cout << "before: m1 -> " << m1 << ", m2 -> " << m2 << std::endl;
+	ft_memcpy(m1, m2, 10);
+	std::cout << "after : m1 -> " << m1 << ", m2 -> " << m2 << std::endl;
+	std::cout << std::endl;
+	delete [] m1;
+	delete [] m2;
+}
+
+void test_strdup(void)
+{
+	char *mem = nullptr;
+
+	std::cout << "test ft_strdup: " << std::endl;
+	mem = ft_strdup("0123456789");
+	std::cout << "after -> " << mem << std::endl;
+	std::cout << std::endl;
+}
+
 int main(void)
 {
-	// test_bzero();
+	test_bzero();
 	test_strcat();
-	// test_isalpha();
-	// test_isdigit();
-	// test_isalnum();
-	// test_isascii();
-	// test_isprint();
-	// test_toupper();
-	// test_tolower();
-	// test_puts();
+	test_isalpha();
+	test_isdigit();
+	test_isalnum();
+	test_isascii();
+	test_isprint();
+	test_toupper();
+	test_tolower();
+	test_puts();
+
 	test_strlen();
 	test_memset();
+	test_memcpy();
+	test_strdup();
 	return (0);
 }

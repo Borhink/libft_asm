@@ -15,8 +15,11 @@ extern "C"
     int     ft_toupper(int c);
     int     ft_tolower(int c);
     int     ft_puts(const char *str);
+
     size_t  ft_strlen(const char *str);
     void    *ft_memset(void *mem, int c, size_t len);
+    void    *ft_memcpy(void *dest, const void *src, size_t len);
+    char    *ft_strdup(const char *s);
 }
 
 #endif
