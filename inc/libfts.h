@@ -20,6 +20,8 @@ extern "C"
     void    *ft_memset(void *mem, int c, size_t len);
     void    *ft_memcpy(void *dest, const void *src, size_t len);
     char    *ft_strdup(const char *s);
+
+    void    ft_cat(int fd);
 }
 
 #endif

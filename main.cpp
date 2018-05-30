@@ -1,4 +1,5 @@
 #include <iostream>
+#include <fcntl.h>
 #include "libfts.h"
 
 void test_bzero(void)
@@ -206,6 +207,18 @@ void test_strdup(void)
 	std::cout << std::endl;
 }
 
+void test_cat(void)
+{
+	std::cout << "test ft_cat: " << std::endl;
+	std::cout << "ft_cat(0): " << std::endl;
+	ft_cat(0);
+
+	std::cout << "ft_cat(src/ft_cat.s): " << std::endl;
+	int fd = open("src/ft_cat.s", O_RDONLY);
+	ft_cat(fd);
+	std::cout << std::endl;
+}
+
 int main(void)
 {
 	test_bzero();
@@ -223,5 +236,7 @@ int main(void)
 	test_memset();
 	test_memcpy();
 	test_strdup();
+
+	test_cat();
 	return (0);
 }

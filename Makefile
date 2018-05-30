@@ -28,7 +28,9 @@ SRC_NAME =	ft_bzero.s \
 			ft_strlen.s \
 			ft_memset.s \
 			ft_memcpy.s \
-			ft_strdup.s
+			ft_strdup.s \
+			\
+			ft_cat.s
 
 TEST_SRC_NAME = main.cpp
 OBJ_NAME = $(SRC_NAME:.s=.o)
