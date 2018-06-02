@@ -228,17 +228,6 @@ void	test_abs(void)
 	std::cout << std::endl;
 }
 
-void	test_intlen(void)
-{
-	std::cout << "test ft_intlen: " << std::endl;
-	std::cout << "ft_intlen(0): " << ft_intlen(0) << std::endl;
-	std::cout << "ft_intlen(-1): " << ft_intlen(-1) << std::endl;
-	std::cout << "ft_intlen(1): " << ft_intlen(1) << std::endl;
-	std::cout << "ft_intlen(99): " << ft_intlen(99) << std::endl;
-	std::cout << "ft_intlen(-7865): " << ft_intlen(-7865) << std::endl;
-	std::cout << std::endl;
-}
-
 void	test_memchr(void)
 {
 	std::cout << "test ft_memchr: " << std::endl;
@@ -273,6 +262,16 @@ void	test_strchr(void)
 	std::cout << std::endl;
 }
 
+void test_memcmp(void)
+{
+	std::cout << "test ft_memcmp: " << std::endl;
+	std::cout << "ft_memcmp(\"0123456789\", \"0123456789\", 10) -> " << ft_memcmp("0123456789", "0123456789", 10) << std::endl;
+	std::cout << "ft_memcmp(\"0123456789\", \"012345678\\0\", 10) -> " << ft_memcmp("0123456789", "012345678\0", 10) << std::endl;
+	std::cout << "ft_memcmp(\"012345678\\0\", \"0123456789\", 10) -> " << ft_memcmp("012345678\0", "0123456789", 10) << std::endl;
+	std::cout << "ft_memcmp(\"0123.56789\", \"0123456789\", 10) -> " << ft_memcmp("0123.56789", "0123456789", 10) << std::endl;
+	std::cout << std::endl;
+}
+
 int main(void)
 {
 	test_bzero();
@@ -294,8 +293,8 @@ int main(void)
 	test_cat();
 
 	test_abs();
-	// test_intlen();
 	test_memchr();
 	test_strchr();
+	test_memcmp();
 	return (0);
 }

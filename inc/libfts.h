@@ -27,6 +27,7 @@ extern "C"
     size_t  ft_intlen(long nb);
     void	*ft_memchr(const void *s, int c, size_t len);
     char	*ft_strchr(const char *s, int c);
+    int	    ft_memcmp(const void *s1, const void *s2, size_t len);
 }
 
 #endif

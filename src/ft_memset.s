@@ -10,9 +10,9 @@ global _ft_memset
 ; rax -> return val
 
 _ft_memset:
+	mov		r8,			rdi	;	r8 = rdi (void *mem)
     cmp     rdx,        0   ;   if (len == 0)
     je      return          ;       return;
-	mov		r8,			rdi	;	r8 = rdi (void *mem)
 
 set:	
 	mov     rax,    rsi		;	rax = rsi (int c)

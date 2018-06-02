@@ -10,9 +10,9 @@ global _ft_memcpy
 ; rax -> return val
 
 _ft_memcpy:
+	mov		r8,			rdi	;	r8 = rdi (void *mem)
     cmp     rdx,        0   ;   if (len == 0)
     je      return          ;       return;
-	mov		r8,			rdi	;	r8 = rdi (void *mem)
 
 cpy:
     mov     rcx,    rdx		;	rcx = rdx (size_t len)

@@ -1,8 +1,8 @@
 section .data
-   buffsize equ     128
+   buffsize equ     1024
 
 section .bss
-   buf      resb    128
+   buf      resb    1024
 
 section .text
 global _ft_cat
