@@ -28,6 +28,7 @@ extern "C"
     char	*ft_strchr(const char *s, int c);
     int	    ft_memcmp(const void *s1, const void *s2, size_t len);
     void    *ft_memalloc(size_t size);
+    void	ft_memdel(void **ap);
 }
 
 #endif

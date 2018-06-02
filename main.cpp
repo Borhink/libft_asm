@@ -281,7 +281,19 @@ void test_memalloc(void)
 	std::cout << "ft_memalloc(10) -> " << mem << std::endl;
 	std::cout << std::endl;
 
-	delete [] mem;
+	free(mem);
+}
+
+void test_memdel(void)
+{
+	std::cout << "test ft_memdel: " << std::endl;
+	char *mem = (char*)ft_memalloc(10);
+	for (int i = 0; i < 9; i++)
+		mem[i] = '0' + i;
+	std::cout << "before -> " << (unsigned long)mem << std::endl;
+	ft_memdel(&mem);
+	std::cout << "after -> " << (unsigned long)mem << std::endl;
+	std::cout << std::endl;
 }
 
 int main(void)
@@ -309,5 +321,6 @@ int main(void)
 	test_strchr();
 	test_memcmp();
 	test_memalloc();
+	test_memdel();
 	return (0);
 }
