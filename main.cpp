@@ -291,8 +291,10 @@ void test_memdel(void)
 	for (int i = 0; i < 9; i++)
 		mem[i] = '0' + i;
 	std::cout << "before -> " << (unsigned long)mem << std::endl;
-	ft_memdel(&mem);
+	ft_memdel((void**)&mem);
 	std::cout << "after -> " << (unsigned long)mem << std::endl;
+	std::cout << "ft_memdel(0) -> " << std::endl;
+	ft_memdel(0);
 	std::cout << std::endl;
 }
 
