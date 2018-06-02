@@ -35,7 +35,8 @@ SRC_NAME =	ft_bzero.s \
 			ft_abs.s \
 			ft_memchr.s \
 			ft_strchr.s \
-			ft_memcmp.s
+			ft_memcmp.s \
+			ft_memalloc.s
 
 TEST_SRC_NAME = main.cpp
 OBJ_NAME = $(SRC_NAME:.s=.o)

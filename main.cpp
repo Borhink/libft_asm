@@ -272,6 +272,18 @@ void test_memcmp(void)
 	std::cout << std::endl;
 }
 
+void test_memalloc(void)
+{
+	std::cout << "test ft_memalloc: " << std::endl;
+	char *mem = (char*)ft_memalloc(10);
+	for (int i = 0; i < 9; i++)
+		mem[i] = '0' + i;
+	std::cout << "ft_memalloc(10) -> " << mem << std::endl;
+	std::cout << std::endl;
+
+	delete [] mem;
+}
+
 int main(void)
 {
 	test_bzero();
@@ -296,5 +308,6 @@ int main(void)
 	test_memchr();
 	test_strchr();
 	test_memcmp();
+	test_memalloc();
 	return (0);
 }
