@@ -32,7 +32,9 @@ SRC_NAME =	ft_bzero.s \
 			\
 			ft_cat.s \
 			\
-			ft_abs.s
+			ft_abs.s \
+			ft_memchr.s \
+			ft_strchr.s
 
 TEST_SRC_NAME = main.cpp
 OBJ_NAME = $(SRC_NAME:.s=.o)

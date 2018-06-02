@@ -14,13 +14,13 @@ _ft_memchr:
 	mov		rcx,	rdx		;	while (len != 0)
 	cld						;	cld: direction flag -> ++, std: direction flag -> --
     repne	scasb			;	repeat while not equal: ++rdi, --rcx
-	cmp		byte[rdi],	rdx	;	if (*mem == c)
-	je		return			;		return (rax);
+	je		return			;	if (scasc found) return (rax);
 
 null:
 	mov		rax,	0
 	ret						;	return (0);
 
 return:
+	dec		rdi				; back on the first occurence of c
 	mov		rax,	rdi
     ret                     ;   return (rax);

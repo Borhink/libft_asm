@@ -18,8 +18,7 @@ _ft_strchr:
 	mov		rax,	rsi		;	while (*s != c)
 	cld						;	cld: direction flag -> ++, std: direction flag -> --
 	repne	scasb			;	repeat while not equal: ++rdi, --rcx
-	cmp		byte[rdi],	rdx	;	if (*s == c)
-	je		return			;		return (rax);
+	je		return			;	if (scasc found) return (rax);
 
 null:
 	mov		rax,	0
